@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default class App extends React.Component {
   render() {
     let playlist
-    fetch('https://googleapis.com/youtube/v3/playlistItems', {
+    playlist = fetch('https://googleapis.com/youtube/v3/playlistItems', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
