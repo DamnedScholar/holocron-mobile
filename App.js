@@ -14,6 +14,7 @@ export default class App extends React.Component {
             part: 'id,snippet',
             playlistId: 'PLLCvyMTFX6UbTsPaBVEGvejUL4yZC1ExQ',
             key: 'AIzaSyAeeVWvyfGbzZd5dBrkkAPe7IAUu6HcqRo'
+        }
     });
 
     return (
