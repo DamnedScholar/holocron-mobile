@@ -11,12 +11,9 @@ export default class App extends React.Component {
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
             part: 'id,snippet',
             playlistId: 'PLLCvyMTFX6UbTsPaBVEGvejUL4yZC1ExQ',
             key: 'AIzaSyAeeVWvyfGbzZd5dBrkkAPe7IAUu6HcqRo'
-        }),
     });
 
     return (
