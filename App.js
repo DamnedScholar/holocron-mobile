@@ -19,22 +19,28 @@ export default class App extends React.Component {
         key: 'AIzaSyAeeVWvyfGbzZd5dBrkkAPe7IAUu6HcqRo'
     }
 
-    playlist = fetch('https://googleapis.com/youtube/v3/playlistItems?part=' + c.part + '&playlistId=' + c.playlistId + '&key=' + c.key, {
+    fetch('https://googleapis.com/youtube/v3/playlistItems?part=' + c.part + '&playlistId=' + c.playlistId + '&key=' + c.key, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
         }
-    });
+    }).then( response => response.json()).then( playlist => {
+      return (
+        <View style={styles.container}>
+          <Text>{JSON.stringify(playlist)}</Text>
+        </View>
+      )
+    }).catch( error => {
+      return (
+        <View style={styles.container}>
+          <Text>The request didn't work out.</Text>
+        </View>
+      )
+    })
 
 
-    return (
-      <View style={styles.container}>
-        <Text>{JSON.stringify(playlist)}</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+
   }
 }
 
