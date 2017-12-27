@@ -27,11 +27,13 @@ export default class App extends React.Component {
     }).then( response => response.json()).then( playlist => {
       this.setState({
         isLoading: false,
+        result: "Success!",
         content: JSON.stringify(playlist)
       })
     }).catch( error => {
       this.setState({
         isLoading: false,
+        result: "Fail!"
         content: JSON.stringify(error)
       })
     })
@@ -50,6 +52,7 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
+        <Text>{this.state.result}</Text>
         <Text>{this.state.content}</Text>
       </View>
     )
