@@ -18,7 +18,7 @@ export default class App extends React.Component {
         key: 'AIzaSyAeeVWvyfGbzZd5dBrkkAPe7IAUu6HcqRo'
     }
 
-    fetch('https://googleapis.com/youtube/v3/playlistItems?part=' + c.part + '&playlistId=' + c.playlistId + '&key=' + c.key, {
+    return fetch('https://googleapis.com/youtube/v3/playlistItems?part=' + c.part + '&playlistId=' + c.playlistId + '&key=' + c.key, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -31,11 +31,7 @@ export default class App extends React.Component {
         content: JSON.stringify(playlist)
       })
     }).catch( error => {
-      this.setState({
-        isLoading: false,
-        result: "Fail!",
-        content: JSON.stringify(error)
-      })
+      console.error(error)
     })
   }
 
