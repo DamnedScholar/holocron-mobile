@@ -33,7 +33,7 @@ export default class App extends React.Component {
     }).catch( error => {
       this.setState({
         isLoading: false,
-        result: "Fail!"
+        result: "Fail!",
         content: JSON.stringify(error)
       })
     })
