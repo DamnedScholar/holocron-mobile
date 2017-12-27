@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import yt from 'react-native-youtube'
-import buildApiRequest from 'google-api'
+import buildApiRequest from './google-api'
 
 export default class App extends React.Component {
   render() {
