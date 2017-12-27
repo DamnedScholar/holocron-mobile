@@ -32,7 +32,7 @@ export default class App extends React.Component {
     }).catch( error => {
       this.setState({
         isLoading: false,
-        content: error
+        content: JSON.stringify(error)
       })
     })
   }
