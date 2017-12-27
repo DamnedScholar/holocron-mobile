@@ -11,7 +11,7 @@ export default class App extends React.Component {
     }
   }
 
-  onComponentDidMount() {
+  componentDidMount() {
     let c = {
         part: 'id,snippet',
         playlistId: 'PLLCvyMTFX6UbTsPaBVEGvejUL4yZC1ExQ',
