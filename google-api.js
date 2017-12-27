@@ -15,7 +15,7 @@ gapi._bs = new Date().getTime();
 (function() {/*
  gapi.loader.OBJECT_CREATE_TEST_OVERRIDE &&*/
     var g = window,
-        h = document,
+        h = app,
         m = g.location,
         n = function() {},
         q = /\[native code\]/,
